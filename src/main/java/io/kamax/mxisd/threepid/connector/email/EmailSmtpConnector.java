@@ -116,6 +116,7 @@ public class EmailSmtpConnector implements EmailConnector {
             msg.saveChanges();
 
             log.info("Sending email to {} via SMTP using {}:{}", recipient, cfg.getHost(), cfg.getPort());
+            log.info("chagai95: {}","send");
             SMTPTransport transport = (SMTPTransport) session.getTransport("smtp");
 
             if (cfg.getTls() < 3) {
