@@ -168,9 +168,9 @@ jar {
 }
 
 shadowJar {
-    baseName = project.name
+    archiveBaseName = project.name
     classifier = null
-    version = null
+    archiveVersion = null
 }
 
 task debBuild(dependsOn: shadowJar) {
