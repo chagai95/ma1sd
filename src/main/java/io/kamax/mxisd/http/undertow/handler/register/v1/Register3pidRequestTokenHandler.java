@@ -56,6 +56,8 @@ public class Register3pidRequestTokenHandler extends BasicHttpHandler {
     public void handleRequest(HttpServerExchange exchange) {
         JsonObject body = parseJsonObject(exchange);
 
+        log.info("chagai95");
+
         String medium = getPathVariable(exchange, Key);
         String address = GsonUtil.findString(body, "address").orElse("");
         if (ThreePidMedium.Email.is(medium)) {
