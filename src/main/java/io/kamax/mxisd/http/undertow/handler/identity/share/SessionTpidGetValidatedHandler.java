@@ -64,8 +64,7 @@ public class SessionTpidGetValidatedHandler extends BasicHttpHandler implements 
 
             respond(exchange, obj);
         } catch (SessionNotValidatedException e) {
-//            log.info("Session {} was requested but has not yet been validated", sid);
-//            log.info("Error: {}", e.getError());
+            log.info("Session {} was requested but has not yet been validated", sid);
             throw e;
         }
     }
