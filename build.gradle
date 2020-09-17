@@ -44,7 +44,7 @@ def debBuildConfPath = "${debBuildBasePath}${debConfPath}"
 def debBuildDataPath = "${debBuildBasePath}${debDataPath}"
 def debBuildSystemdPath = "${debBuildBasePath}${debSystemdPath}"
 
-def dockerImageName = "ma1uta/ma1sd"
+def dockerImageName = "chagai95/ma1sd"
 def dockerImageTag = "${dockerImageName}:${ma1sdVersion()}"
 
 group = 'io.kamax'
