@@ -47,6 +47,7 @@ public class SessionTpidGetValidatedHandler extends BasicHttpHandler implements 
         String secret = getQueryParameter(exchange, "client_secret");
 
         try {
+            log.info("SessionManager: {}", mgr);
             ThreePidValidation pid = mgr.getValidated(sid, secret);
             log.info("ThreePidValidation: {}", pid);
 
