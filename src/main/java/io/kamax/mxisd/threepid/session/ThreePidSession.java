@@ -63,7 +63,7 @@ public class ThreePidSession implements IThreePidSession {
         timestamp = Instant.ofEpochMilli(dao.getCreationTime());
         isValidated = dao.getValidated();
         if (isValidated) {
-            validationTimestamp = Instant.ofEpochMilli(dao.getValidationTime());
+            validationTimestamp = Instant.ofEpochMilli(dao.getCreationTime());
         }
 
         isRemote = dao.isRemote();
