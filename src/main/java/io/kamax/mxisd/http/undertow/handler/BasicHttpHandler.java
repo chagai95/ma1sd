@@ -184,7 +184,7 @@ public abstract class BasicHttpHandler implements HttpHandler {
         obj.addProperty("errcode", errCode);
         obj.addProperty("error", error);
         obj.addProperty("success", false);
-        log.info("Request {} {} - Error {}: {}", exchange.getRequestMethod(), exchange.getRequestURL(), errCode, error);
+//        log.info("Request {} {} - Error {}: {}", exchange.getRequestMethod(), exchange.getRequestURL(), errCode, error);
         return obj;
     }
 

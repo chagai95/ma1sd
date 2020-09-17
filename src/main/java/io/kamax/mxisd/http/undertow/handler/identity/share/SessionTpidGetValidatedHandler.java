@@ -48,16 +48,23 @@ public class SessionTpidGetValidatedHandler extends BasicHttpHandler implements 
 
         try {
             ThreePidValidation pid = mgr.getValidated(sid, secret);
+            log.info("ThreePidValidation: {}", pid);
 
             JsonObject obj = new JsonObject();
             obj.addProperty("medium", pid.getMedium());
+            log.info("medium: {}", pid.getMedium());
+
             obj.addProperty("address", pid.getAddress());
+            log.info("address: {}", pid.getAddress());
+
             obj.addProperty("validated_at", pid.getValidation().toEpochMilli());
+            log.info("validated_at: {}",  pid.getValidation().toEpochMilli());
+
 
             respond(exchange, obj);
         } catch (SessionNotValidatedException e) {
 //            log.info("Session {} was requested but has not yet been validated", sid);
-            log.info("Error: {}", e.getError());
+//            log.info("Error: {}", e.getError());
             throw e;
         }
     }
