@@ -42,6 +42,7 @@ public class SessionTpidGetValidatedHandler extends BasicHttpHandler implements 
 
     @Override
     public void handleRequest(HttpServerExchange exchange) {
+        log.info("HttpServerExchange: {}", exchange);
         String sid = getQueryParameter(exchange, "sid");
         String secret = getQueryParameter(exchange, "client_secret");
 
@@ -55,7 +56,8 @@ public class SessionTpidGetValidatedHandler extends BasicHttpHandler implements 
 
             respond(exchange, obj);
         } catch (SessionNotValidatedException e) {
-            log.info("Session {} was requested but has not yet been validated", sid);
+//            log.info("Session {} was requested but has not yet been validated", sid);
+            log.info("Error: {}", e.getError());
             throw e;
         }
     }
