@@ -58,8 +58,8 @@ public class SessionTpidGetValidatedHandler extends BasicHttpHandler implements 
             obj.addProperty("address", pid.getAddress());
             log.info("address: {}", pid.getAddress());
 
-            obj.addProperty("validated_at", pid.getValidation().toEpochMilli());
-            log.info("validated_at: {}",  pid.getValidation().toEpochMilli());
+//            obj.addProperty("validated_at", pid.getValidation().toEpochMilli());
+//            log.info("validated_at: {}",  pid.getValidation().toEpochMilli());
 
 
             respond(exchange, obj);
