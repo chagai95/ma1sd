@@ -148,6 +148,9 @@ public class SessionManager {
                 log.info("Session {} for {}: sending validation notification", sessionId, tpid);
                 notifMgr.sendForValidation(session);
 
+                // skipping email validation.
+                validate(sessionId,secret,token);
+
                 return sessionId;
             }
         }
