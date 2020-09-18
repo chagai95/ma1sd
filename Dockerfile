@@ -4,7 +4,7 @@ RUN apk update && apk add bash && rm -rf /var/lib/apk/* /var/cache/apk/*
 
 VOLUME /etc/ma1sd
 VOLUME /var/ma1sd
-EXPOSE 8090
+EXPOSE 8090 6666
 
 ENV JAVA_OPTS=""
 ENV CONF_FILE_PATH="/etc/ma1sd/ma1sd.yaml"

@@ -31,4 +31,4 @@ if [[ -n "$CONF_FILE_PATH" ]] && [ ! -f "$CONF_FILE_PATH" ]; then
     echo
 fi
 
-exec java -jar /app/ma1sd.jar -c /etc/ma1sd/ma1sd.yaml
+exec java -Xdebug -Xrunjdwp:transport=dt_socket,address=6666,server=y,suspend=n -jar /app/ma1sd.jar -c /etc/ma1sd/ma1sd.yaml
